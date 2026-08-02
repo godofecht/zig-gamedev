@@ -1,0 +1,48 @@
+{
+  "name": "zig-gamedev",
+  "upstream": "zig-gamedev/zig-gamedev",
+  "fork": "godofecht/zig-gamedev",
+  "branch": "azazel-zaza-integration",
+  "notes": "large game-dev monorepo with assets and package deps",
+  "status": "integration scaffold",
+  "preferred_zig": "0.15",
+  "baseline_command": [
+    "zig",
+    "build",
+    "--help"
+  ],
+  "build_zig": "0.15.2",
+  "build_command": [
+    "zig",
+    "build",
+    "--summary",
+    "all"
+  ],
+  "expected_build_classification": "ok",
+  "azazel_command": [
+    "azazel",
+    "parity",
+    "--manifest",
+    ".azazel/parity.json"
+  ],
+  "expected_baseline_classification": "zig-api-drift",
+  "first_targets": [
+    "package modules",
+    "asset-heavy examples",
+    "optional dependency selection"
+  ],
+  "system_deps": [],
+  "required_tools": [],
+  "pkg_config_libs": [],
+  "replacement_gaps": [
+    "C/C++ dependency graph slices",
+    "asset-heavy example selection",
+    "framework/link metadata"
+  ],
+  "integration_kind": "azazel",
+  "parity_status": "scaffold-only",
+  "executable_parity_status": "not-modeled",
+  "executable_parity_command": [],
+  "expected_executable_parity_classification": "not-modeled",
+  "executable_parity_targets": []
+}
