@@ -43,10 +43,18 @@
     ],
     "integration_kind": "azazel",
     "executable_parity": {
-      "status": "not-modeled",
-      "command": [],
-      "expected_classification": "not-modeled",
-      "targets": [],
+      "status": "ready",
+      "command": [
+        "zig",
+        "build",
+        "--summary",
+        "all"
+      ],
+      "expected_classification": "ok",
+      "targets": [
+        "module:zig_gamedev_vectormath",
+        "exe:zig_gamedev_vectormath_probe"
+      ],
       "workdir": ".azazel/parity-work"
     }
   }

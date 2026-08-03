@@ -41,8 +41,16 @@
   ],
   "integration_kind": "azazel",
   "parity_status": "scaffold-only",
-  "executable_parity_status": "not-modeled",
-  "executable_parity_command": [],
-  "expected_executable_parity_classification": "not-modeled",
-  "executable_parity_targets": []
+  "executable_parity_status": "ready",
+  "executable_parity_command": [
+    "zig",
+    "build",
+    "--summary",
+    "all"
+  ],
+  "expected_executable_parity_classification": "ok",
+  "executable_parity_targets": [
+    "module:zig_gamedev_vectormath",
+    "exe:zig_gamedev_vectormath_probe"
+  ]
 }
