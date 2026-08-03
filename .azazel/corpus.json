@@ -62,6 +62,9 @@
     "artifact:zmesh:zmesh",
     "package:znoise",
     "artifact:znoise:FastNoiseLite",
+    "package:zgui",
+    "artifact:zgui:imgui",
+    "package-option:zgui:backend=glfw_wgpu",
     "asset:sdl2_demo_content"
   ],
   "executable_parity_install_checks": [
