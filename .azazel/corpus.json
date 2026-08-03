@@ -53,6 +53,8 @@
     "module:zig_gamedev_vectormath",
     "exe:zig_gamedev_vectormath_probe",
     "package:zmath",
-    "package:zopengl"
+    "package:zopengl",
+    "package:zglfw",
+    "artifact:zglfw:glfw"
   ]
 }
