@@ -189,6 +189,9 @@ import json, sys
 def zig_string(s):
     return json.dumps(s)
 
+def zig_optional_string(s):
+    return 'null' if s is None else zig_string(s)
+
 def zig_string_list(items):
     if items:
         return '&.{ ' + ', '.join(zig_string(item) for item in items) + ' }'
