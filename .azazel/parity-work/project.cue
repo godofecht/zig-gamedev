@@ -67,4 +67,9 @@ zig_gamedev_vectormath_probe: #Module & {
         package: "znoise"
         artifact: "FastNoiseLite"
     }]
+    install_dirs: [{
+        source_dir: "../../samples/sdl2_demo/sdl2_demo_content"
+        install_dir: "bin"
+        install_subdir: "sdl2_demo_content"
+    }]
 }

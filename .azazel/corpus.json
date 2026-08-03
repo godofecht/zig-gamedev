@@ -59,6 +59,7 @@
     "package:zmesh",
     "artifact:zmesh:zmesh",
     "package:znoise",
-    "artifact:znoise:FastNoiseLite"
+    "artifact:znoise:FastNoiseLite",
+    "asset:sdl2_demo_content"
   ]
 }
