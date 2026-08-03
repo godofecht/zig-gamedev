@@ -54,7 +54,8 @@
       "targets": [
         "module:zig_gamedev_vectormath",
         "exe:zig_gamedev_vectormath_probe",
-        "package:zmath"
+        "package:zmath",
+        "package:zopengl"
       ],
       "workdir": ".azazel/parity-work"
     }

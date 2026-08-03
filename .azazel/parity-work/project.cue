@@ -9,6 +9,9 @@ packages: {
     zmath: {
         path: "../../zig-pkg/zmath-0.11.0-dev-wjwivdMsAwD-xaLj76YHUq3t9JDH-X16xuMTmnDzqbu2"
     }
+    zopengl: {
+        path: "../../zig-pkg/zopengl-0.6.0-dev-5-tnz36mDgBuU9pDfag6_B-qCWOJQc5GXiXuZ6z41zQM"
+    }
 }
 
 zig_gamedev_vectormath: #Module & {
@@ -25,5 +28,10 @@ zig_gamedev_vectormath_probe: #Module & {
         alias: "zmath"
         package: "zmath"
         module: "root"
+    }, {
+        alias: "zopengl"
+        package: "zopengl"
+        module: "root"
+        pass_optimize: false
     }]
 }
