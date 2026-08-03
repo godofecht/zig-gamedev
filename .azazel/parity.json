@@ -47,6 +47,8 @@
       "command": [
         "zig",
         "build",
+        "--prefix",
+        ".azazel-install",
         "--summary",
         "all"
       ],
@@ -63,6 +65,9 @@
         "package:znoise",
         "artifact:znoise:FastNoiseLite",
         "asset:sdl2_demo_content"
+      ],
+      "install_checks": [
+        ".azazel-install/bin/sdl2_demo_content/zero.png"
       ],
       "workdir": ".azazel/parity-work"
     }
