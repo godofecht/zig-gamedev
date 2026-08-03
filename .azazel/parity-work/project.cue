@@ -21,6 +21,9 @@ packages: {
     znoise: {
         path: "../../zig-pkg/znoise-0.3.0-dev-gK1op9ikAQDrS4G22GluyaQaabjGzhdnhV2QyCoLE8z7"
     }
+    zgui: {
+        path: "../../zig-pkg/zgui-0.6.0-dev--L6sZKkSbgCUBXLVfwJDPpMkETz7ll-mmQYQae-nMxjt"
+    }
 }
 
 zig_gamedev_vectormath: #Module & {
@@ -55,6 +58,11 @@ zig_gamedev_vectormath_probe: #Module & {
         alias: "znoise"
         package: "znoise"
         module: "root"
+    }, {
+        alias: "zgui"
+        package: "zgui"
+        module: "root"
+        backend: "glfw_wgpu"
     }]
     pkg_artifacts: [{
         package: "zglfw"
@@ -66,6 +74,10 @@ zig_gamedev_vectormath_probe: #Module & {
     }, {
         package: "znoise"
         artifact: "FastNoiseLite"
+    }, {
+        package: "zgui"
+        artifact: "imgui"
+        backend: "glfw_wgpu"
     }]
     install_dirs: [{
         source_dir: "../../samples/sdl2_demo/sdl2_demo_content"

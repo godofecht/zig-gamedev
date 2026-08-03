@@ -18,6 +18,9 @@
         .znoise = .{
             .path = "../../zig-pkg/znoise-0.3.0-dev-gK1op9ikAQDrS4G22GluyaQaabjGzhdnhV2QyCoLE8z7",
         },
+        .zgui = .{
+            .path = "../../zig-pkg/zgui-0.6.0-dev--L6sZKkSbgCUBXLVfwJDPpMkETz7ll-mmQYQae-nMxjt",
+        },
     },
     .paths = .{
         "build.zig",

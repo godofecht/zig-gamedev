@@ -4,6 +4,7 @@ const zglfw = @import("zglfw");
 const zopengl = @import("zopengl");
 const zmesh = @import("zmesh");
 const znoise = @import("znoise");
+const zgui = @import("zgui");
 
 pub fn main() void {
     const a = vectormath.Vec3.init(1.0, 2.0, 3.0);
@@ -16,4 +17,6 @@ pub fn main() void {
     _ = zopengl.Extension.KHR_debug;
     _ = zmesh.io;
     _ = znoise.FnlGenerator;
+    _ = zgui.backend;
+    _ = zgui.DrawVert;
 }
