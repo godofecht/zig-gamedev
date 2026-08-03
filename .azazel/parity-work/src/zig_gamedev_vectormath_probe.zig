@@ -15,5 +15,5 @@ pub fn main() void {
     _ = zglfw.Window;
     _ = zopengl.Extension.KHR_debug;
     _ = zmesh.io;
-    _ = znoise.FastNoiseLite;
+    _ = znoise.FnlGenerator;
 }
