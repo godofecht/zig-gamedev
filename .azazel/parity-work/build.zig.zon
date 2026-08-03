@@ -1,0 +1,21 @@
+.{
+    .name = .zig_gamedev_azazel_parity,
+    .version = "0.0.0",
+    .fingerprint = 0x28185f0b3b82664a,
+    .dependencies = .{
+        .zmath = .{
+            .path = "../../zig-pkg/zmath-0.11.0-dev-wjwivdMsAwD-xaLj76YHUq3t9JDH-X16xuMTmnDzqbu2",
+        },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "build_spec_test.zig",
+        "compat.zig",
+        "schema.cue",
+        "project.cue",
+        "export.cue",
+        "gen_build_spec.sh",
+        "src",
+    },
+}

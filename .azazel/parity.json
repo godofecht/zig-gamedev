@@ -53,7 +53,8 @@
       "expected_classification": "ok",
       "targets": [
         "module:zig_gamedev_vectormath",
-        "exe:zig_gamedev_vectormath_probe"
+        "exe:zig_gamedev_vectormath_probe",
+        "package:zmath"
       ],
       "workdir": ".azazel/parity-work"
     }

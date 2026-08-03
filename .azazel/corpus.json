@@ -51,6 +51,7 @@
   "expected_executable_parity_classification": "ok",
   "executable_parity_targets": [
     "module:zig_gamedev_vectormath",
-    "exe:zig_gamedev_vectormath_probe"
+    "exe:zig_gamedev_vectormath_probe",
+    "package:zmath"
   ]
 }
