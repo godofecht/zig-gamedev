@@ -2,6 +2,8 @@ const vectormath = @import("zig_gamedev_vectormath");
 const zmath = @import("zmath");
 const zglfw = @import("zglfw");
 const zopengl = @import("zopengl");
+const zmesh = @import("zmesh");
+const znoise = @import("znoise");
 
 pub fn main() void {
     const a = vectormath.Vec3.init(1.0, 2.0, 3.0);
@@ -12,4 +14,6 @@ pub fn main() void {
     _ = zmath.translation(1.0, 2.0, 3.0);
     _ = zglfw.Window;
     _ = zopengl.Extension.KHR_debug;
+    _ = zmesh.io;
+    _ = znoise.FastNoiseLite;
 }

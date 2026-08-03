@@ -15,6 +15,12 @@ packages: {
     zopengl: {
         path: "../../zig-pkg/zopengl-0.6.0-dev-5-tnz36mDgBuU9pDfag6_B-qCWOJQc5GXiXuZ6z41zQM"
     }
+    zmesh: {
+        path: "../../zig-pkg/zmesh-0.11.0-dev-oO3A5lKRCgCGK8Krro4Rj_F_MhO8LT487re5u_DNIzvl"
+    }
+    znoise: {
+        path: "../../zig-pkg/znoise-0.3.0-dev-gK1op9ikAQDrS4G22GluyaQaabjGzhdnhV2QyCoLE8z7"
+    }
 }
 
 zig_gamedev_vectormath: #Module & {
@@ -41,10 +47,24 @@ zig_gamedev_vectormath_probe: #Module & {
         package: "zopengl"
         module: "root"
         pass_optimize: false
+    }, {
+        alias: "zmesh"
+        package: "zmesh"
+        module: "root"
+    }, {
+        alias: "znoise"
+        package: "znoise"
+        module: "root"
     }]
     pkg_artifacts: [{
         package: "zglfw"
         artifact: "glfw"
         pass_optimize: false
+    }, {
+        package: "zmesh"
+        artifact: "zmesh"
+    }, {
+        package: "znoise"
+        artifact: "FastNoiseLite"
     }]
 }

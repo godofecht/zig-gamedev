@@ -57,7 +57,11 @@
         "package:zmath",
         "package:zopengl",
         "package:zglfw",
-        "artifact:zglfw:glfw"
+        "artifact:zglfw:glfw",
+        "package:zmesh",
+        "artifact:zmesh:zmesh",
+        "package:znoise",
+        "artifact:znoise:FastNoiseLite"
       ],
       "workdir": ".azazel/parity-work"
     }
