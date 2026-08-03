@@ -24,6 +24,14 @@ packages: {
     zgui: {
         path: "../../zig-pkg/zgui-0.6.0-dev--L6sZKkSbgCUBXLVfwJDPpMkETz7ll-mmQYQae-nMxjt"
     }
+    zgpu: {
+        path: "../../zig-pkg/zgpu-0.12.0-dev-UxK2DAfAzgAdcCqFsXIj2RZRQFuLFhzr9C-s91Hm0U0q"
+    }
+    dawn_aarch64_macos: {
+        url: "https://github.com/michal-z/webgpu_dawn-aarch64-macos/archive/d2360cdfff0cf4a780cb77aa47c57aca03cc6dfe.tar.gz"
+        hash: "N-V-__8AALVIRAIf5nfpx8-4mEo2RGsynVryPQPcHk95qFM5"
+        lazy: true
+    }
 }
 
 zig_gamedev_vectormath: #Module & {
@@ -63,6 +71,10 @@ zig_gamedev_vectormath_probe: #Module & {
         package: "zgui"
         module: "root"
         backend: "glfw_wgpu"
+    }, {
+        alias: "zgpu"
+        package: "zgpu"
+        module: "root"
     }]
     pkg_artifacts: [{
         package: "zglfw"
@@ -78,7 +90,18 @@ zig_gamedev_vectormath_probe: #Module & {
         package: "zgui"
         artifact: "imgui"
         backend: "glfw_wgpu"
+    }, {
+        package: "zgpu"
+        artifact: "zdawn"
     }]
+    pkg_library_paths: [{
+        package: "dawn_aarch64_macos"
+        os: "macos"
+        arch: "aarch64"
+    }]
+    native: {
+        system_libs: ["dawn"]
+    }
     install_dirs: [{
         source_dir: "../../samples/sdl2_demo/sdl2_demo_content"
         install_dir: "bin"

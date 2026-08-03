@@ -21,6 +21,14 @@
         .zgui = .{
             .path = "../../zig-pkg/zgui-0.6.0-dev--L6sZKkSbgCUBXLVfwJDPpMkETz7ll-mmQYQae-nMxjt",
         },
+        .zgpu = .{
+            .path = "../../zig-pkg/zgpu-0.12.0-dev-UxK2DAfAzgAdcCqFsXIj2RZRQFuLFhzr9C-s91Hm0U0q",
+        },
+        .dawn_aarch64_macos = .{
+            .url = "https://github.com/michal-z/webgpu_dawn-aarch64-macos/archive/d2360cdfff0cf4a780cb77aa47c57aca03cc6dfe.tar.gz",
+            .hash = "N-V-__8AALVIRAIf5nfpx8-4mEo2RGsynVryPQPcHk95qFM5",
+            .lazy = true,
+        },
     },
     .paths = .{
         "build.zig",

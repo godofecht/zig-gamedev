@@ -67,6 +67,9 @@
         "package:zgui",
         "artifact:zgui:imgui",
         "package-option:zgui:backend=glfw_wgpu",
+        "package:zgpu",
+        "artifact:zgpu:zdawn",
+        "package-library-path:dawn_aarch64_macos",
         "asset:sdl2_demo_content"
       ],
       "install_checks": [

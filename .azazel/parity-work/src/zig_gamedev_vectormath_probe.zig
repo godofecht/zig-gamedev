@@ -5,6 +5,7 @@ const zopengl = @import("zopengl");
 const zmesh = @import("zmesh");
 const znoise = @import("znoise");
 const zgui = @import("zgui");
+const zgpu = @import("zgpu");
 
 pub fn main() void {
     const a = vectormath.Vec3.init(1.0, 2.0, 3.0);
@@ -19,4 +20,5 @@ pub fn main() void {
     _ = znoise.FnlGenerator;
     _ = zgui.backend;
     _ = zgui.DrawVert;
+    _ = zgpu.GraphicsContext;
 }
