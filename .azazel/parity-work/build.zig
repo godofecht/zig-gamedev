@@ -263,6 +263,7 @@ pub fn build(b: *std.Build) void {
                 .install_subdir = dir.install_subdir,
             });
             step.step.dependOn(&install_dir.step);
+            b.getInstallStep().dependOn(&install_dir.step);
         }
         steps.put(m.name, step) catch unreachable;
     }
@@ -285,6 +286,7 @@ pub fn build(b: *std.Build) void {
     for (spec.modules) |m| {
         if (steps.get(m.name)) |step| {
             const install = b.addInstallArtifact(step, .{});
+            b.getInstallStep().dependOn(&install.step);
             for (m.post, 0..) |cmd, idx| {
                 const post = addPostCommand(b, m.name, idx, cmd);
                 post.dependencies.append(&install.step) catch unreachable;
