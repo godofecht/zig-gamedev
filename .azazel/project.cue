@@ -1,9 +1,9 @@
-// Azazel parity model for zig-gamedev. First target slice: zvectormath, a
-// self-contained pure-Zig 3D math library (ported from DirectXMath). It imports
-// only std, so Azazel builds it directly as a static library. Note: zig-gamedev
-// moved its former in-tree libs (zmath etc.) out to separate dependency repos, so
-// this is the remaining self-contained math slice in the working tree. Verified:
-// the source compiles as a static lib on 0.16.0.
+// Azazel parity model for zig-gamedev. The fork moved its former in-tree libs
+// (zmath etc.) out to separate dependency repos, so beyond the local
+// zvectormath static slice the next target is zmath itself, consumed as a
+// package. A small probe exe imports the zmath package (module "root") and
+// exercises a few SIMD ops, proving Azazel models zig-gamedev's pure-Zig math
+// library through pkg_imports. Lane 0.16. zvectormath is kept.
 package build
 
 toolchain: zig: {
@@ -11,7 +11,19 @@ toolchain: zig: {
 	preferred: "0.16"
 }
 
+packages: {
+	zmath: {}
+}
+
 zvectormath: #Module & {
 	kind: "static"
 	root: "samples/common/src/vectormath.zig"
+}
+
+zmath_probe: #Module & {
+	kind: "exe"
+	root: "samples/common/src/zmath_probe.zig"
+	pkg_imports: [
+		{alias: "zmath", package: "zmath", module: "root"},
+	]
 }
