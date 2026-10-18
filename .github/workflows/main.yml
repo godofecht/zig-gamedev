@@ -24,6 +24,8 @@ jobs:
           lfs: 'true'
       - name: Install Zig
         uses: mlugg/setup-zig@v2
+        with:
+          version: 0.15.2  # Match build.zig.zon rather than unpinned master/nightly
       - name: Check format
         continue-on-error: true
         run: zig fmt --check .
