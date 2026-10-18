@@ -30,7 +30,21 @@ jobs:
         continue-on-error: true
         run: zig fmt --check .
       - name: Build all native
-        run: zig build -Dexperiments
+        shell: bash
+        run: |
+          set -o pipefail
+          for attempt in 1 2 3; do
+            if zig build -Dexperiments 2>&1 | tee zig-build.log; then
+              exit 0
+            fi
+            # Only retry the transient remote download failure. Compiler
+            # errors and linker errors must still fail on the first attempt.
+            if ! grep -Fq 'invalid HTTP response: HttpConnectionClosing' zig-build.log || [ "$attempt" -eq 3 ]; then
+              exit 1
+            fi
+            echo "::warning::Zig package download connection closed; retrying (attempt $attempt/3)"
+            sleep $((attempt * 10))
+          done
       - name: Cross compile Linux->Windows
         if: runner.os == 'Linux'
         run: zig build -Dtarget=x86_64-windows-gnu
